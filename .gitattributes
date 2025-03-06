@@ -1,3 +1,0 @@
-resurse/**/* filter=lfs diff=lfs merge=lfs -text
-src/**/* filter=lfs diff=lfs merge=lfs -text
-Web_TVClientHub.exe filter=lfs diff=lfs merge=lfs -text
