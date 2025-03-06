@@ -1,103 +1,103 @@
-# Documentație Aplicație Python/Flask
+# Python/Flask Application Documentation
 
-**Autor:** Marin Valentin-Gabriel 432B
-
----
-
-## Introducere
-
-Aplicația prezentată este dezvoltată utilizând Python împreună cu framework-ul Flask pentru backend și tehnologii precum HTML, CSS și Bootstrap pentru frontend. Aceasta gestionează o relație de tip N:M între două entități: clienți și posturi TV.
+**Author:** Marin Valentin-Gabriel 432B
 
 ---
 
-## Tehnologii utilizate
+## Introduction
 
-### Python și Flask:
-- Framework-ul Flask a fost utilizat pentru a dezvolta backend-ul aplicației. Flask oferă o arhitectură ușor de utilizat și scalabilă pentru aplicațiile web.
+The presented application is developed using Python with the Flask framework for the backend and technologies such as HTML, CSS, and Bootstrap for the frontend. It manages an N:M relationship between two entities: clients and TV stations.
 
-### HTML, CSS și Bootstrap:
-- Frontend-ul aplicației utilizează HTML și CSS pentru structură și design, iar Bootstrap a fost folosit pentru a asigura responsivitatea și un stil modern al interfeței.
+---
+
+## Technologies Used
+
+### Python and Flask:
+- The Flask framework was used to develop the application's backend. Flask provides an easy-to-use and scalable architecture for web applications.
+
+### HTML, CSS, and Bootstrap:
+- The frontend utilizes HTML and CSS for structure and design, while Bootstrap ensures responsiveness and a modern interface style.
 
 ### MySQL:
-- Baza de date utilizată este MySQL, iar conexiunea cu aplicația Flask a fost realizată folosind biblioteca `mysql-connector`.
+- The database used is MySQL, and the connection with the Flask application was made using the `mysql-connector` library.
 
 ---
 
-## Descrierea aplicației
+## Application Description
 
-Aplicația este construită pentru a gestiona relația N:M dintre două entități principale:
-- **Clienți** - reprezentați prin atributele: nume, prenume și email.
-- **Posturi TV** - fiecare având un nume și o descriere.
+The application is built to manage the N:M relationship between two main entities:
+- **Clients** - represented by attributes: first name, last name, and email.
+- **TV Stations** - each with a name and description.
 
-Funcționalitățile aplicației includ:
-- CRUD (Create, Read, Update, Delete) pentru tabelele `clienti` și `posturitv`.
-- Asocierea și dezasocierea entităților `clienti` și `posturitv` printr-o tabelă intermediară (`clienti_posturi`).
-
----
-
-## Diagrama bazei de date
-
-Diagrama bazei de date reprezintă relația N:M dintre `clienti` și `posturitv` prin intermediul tabelei `clienti_posturi`. Aceasta a fost generată utilizând MySQL Workbench și este inclusă în secțiunea următoare (poate fi accesată și prin fișierul `MySQL_Diagram.html` din folderul resurse).
+Application functionalities include:
+- CRUD (Create, Read, Update, Delete) operations for the `clients` and `tvstations` tables.
+- Associating and disassociating the `clients` and `tvstations` entities through an intermediate table (`clients_tvstations`).
 
 ---
 
-## Structura folderului aplicației
+## Database Diagram
 
-Structura completă a proiectului va putea fi găsită în folderul `resurse`, sub denumirea de `Structura_Proiect_Python.html`.
-
----
-
-## Părți importante din cod
-
-### Funcționalitățile CRUD:
-
-#### Listare Client:
-- Afișează lista clienților existenți în baza de date. Dacă utilizatorul introduce un parametru de căutare (email), funcția va filtra rezultatele după acel email.
-
-#### Adăugare Client:
-- Permite adăugarea unui client nou în baza de date printr-un formular.
-
-#### Editare Client:
-- Permite actualizarea informațiilor unui client existent.
-
-#### Ștergere Client:
-- Șterge un client specificat din baza de date.
+The database diagram represents the N:M relationship between `clients` and `tvstations` through the `clients_tvstations` table. This diagram was generated using MySQL Workbench and is included in the next section (also accessible via the `MySQL_Diagram.html` file in the resources folder).
 
 ---
 
-## Manual de instalare și utilizare
+## Application Folder Structure
 
-### Instalare Python:
-1. Descărcați și instalați Python 3.9.10 de pe site-ul oficial sau din folderul resurse.
-2. Rulați instalatorul și, în timpul procesului, bifați opțiunea „Add Python to PATH” pentru a adăuga Python în variabilele de mediu.
-3. Continuați instalarea urmând pașii din asistentul de instalare.
-
-### Instalare MySQL:
-1. Descărcați și instalați MySQL Server 8.0.40 de pe site-ul oficial MySQL sau din folderul resurse.
-2. Urmați pașii din asistentul de instalare:
-   - Selectați „Server only” dacă nu aveți nevoie de alte componente MySQL.
-   - Configurați serverul:
-     - **Username:** Alegeți un nume de utilizator (ex.: root).
-     - **Password:** Alegeți o parolă sigură.
-3. Finalizați instalarea.
-
-### Configurare MySQL:
-1. Deschideți MySQL Workbench sau orice alt client MySQL.
-2. Conectați-vă la server utilizând credențialele configurate în timpul instalării.
-3. Creați o nouă bază de date, și importați în aceasta fișierul `db.sql` din folderul `resurse`.
-4. Navigați în folderul `src` al aplicației și localizați fișierul `config.py`.
-5. Deschideți fișierul și înlocuiți valorile `*****` cu datele dumneavoastră:
-   - Numele bazei de date
-   - Numele utilizatorului MySQL
-   - Parola utilizatorului MySQL
-
-### Rulare aplicație:
-1. După ce ați verificat toți pașii de mai sus, rulați aplicația utilizând executabilul furnizat.
-2. Foarte important, aplicațiile rulează pe bază de executabil, iar antivirusul s-ar putea să detecteze aplicația ca fiind un virus. Este necesar să opriți antivirusul pentru a o rula corect.
+The complete project structure can be found in the `resources` folder, under the name `Project_Structure_Python.html`.
 
 ---
 
-## Bibliografie:
+## Key Code Sections
+
+### CRUD Functionalities:
+
+#### List Clients:
+- Displays the list of existing clients in the database. If the user enters a search parameter (email), the function filters results by that email.
+
+#### Add Client:
+- Allows adding a new client to the database via a form.
+
+#### Edit Client:
+- Enables updating the information of an existing client.
+
+#### Delete Client:
+- Deletes a specified client from the database.
+
+---
+
+## Installation and Usage Guide
+
+### Python Installation:
+1. Download and install Python 3.9.10 from the official website or the resources folder.
+2. Run the installer and check the "Add Python to PATH" option to add Python to environment variables.
+3. Follow the installation steps.
+
+### MySQL Installation:
+1. Download and install MySQL Server 8.0.40 from the official MySQL website or the resources folder.
+2. Follow the installation wizard steps:
+   - Select "Server only" if other MySQL components are not required.
+   - Configure the server:
+     - **Username:** Choose a username (e.g., root).
+     - **Password:** Set a strong password.
+3. Complete the installation.
+
+### MySQL Configuration:
+1. Open MySQL Workbench or any other MySQL client.
+2. Connect to the server using the credentials set during installation.
+3. Create a new database and import the `db.sql` file from the `resources` folder.
+4. Navigate to the application's `src` folder and locate the `config.py` file.
+5. Open the file and replace the `*****` placeholders with your credentials:
+   - Database name
+   - MySQL username
+   - MySQL password
+
+### Running the Application:
+1. After verifying the above steps, run the application using the provided executable.
+2. **Important:** The executable-based applications may be flagged as a virus by antivirus software. Temporarily disable your antivirus to run the application correctly.
+
+---
+
+## Bibliography:
 - **Python Software Foundation, "Python 3.9 Documentation,"** [Online]. Available: https://docs.python.org/3.9/.
 - **Flask Project, "Flask Documentation,"** [Online]. Available: https://flask.palletsprojects.com/.
 - **The Bootstrap Team, "Bootstrap Documentation,"** [Online]. Available: https://getbootstrap.com/.
